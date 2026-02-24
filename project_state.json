@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Smart Study Buddy: A beginner-friendly study app for Class 8-12 students with daily planner, Pomodoro timer, notes, flashcards, exam countdown, AI assistant, and progress tracking",
+  "architectural_notes": [
+    "Target audience: Class 8-12 students, beginner-friendly",
+    "Mobile-first responsive design required",
+    "Lightweight implementation, minimal dependencies",
+    "No complicated settings or configuration"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Friendly study buddy mascot illustration for app icon and dashboard (study-buddy-mascot.dim_256x256.png)\n- Calm study environment hero banner with desk and books for landing area (study-hero.dim_1200x400.png)\n- Simple subject icons set including Science, Maths, English, History, Geography (subject-icons.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-daily-study-planner-where-users-can-add-subjects-science-maths-english-etc-set-study-time-for-each-subject-and-view-a-simple-timetable-displaying-all-planned-study-sessions",
+      "title": "Implement a Daily Study Planner where users can add subjects (Science, Maths, English, etc.), set study time for each subject, and view a simple timetable displaying all planned study sessions",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-pomodoro-focus-timer-with-25-minute-focus-sessions-and-5-minute-breaks-including-start-pause-and-reset-controls-and-display-motivational-messages-after-each-completed-session",
+      "title": "Create a Pomodoro Focus Timer with 25-minute focus sessions and 5-minute breaks, including start, pause, and reset controls, and display motivational messages after each completed session",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-notes-section-where-users-can-write-and-save-short-notes-organize-notes-by-subject-and-edit-or-delete-existing-notes-easily",
+      "title": "Build a Notes Section where users can write and save short notes, organize notes by subject, and edit or delete existing notes easily",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-flashcards-mode-for-quick-revision-where-users-can-create-flashcards-with-questions-on-the-front-and-answers-on-the-back-and-swipe-through-cards-for-review",
+      "title": "Implement a Flashcards Mode for quick revision where users can create flashcards with questions on the front and answers on the back, and swipe through cards for review",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-exam-countdown-feature-where-users-can-add-exam-dates-and-view-the-number-of-days-remaining-until-each-exam-on-the-dashboard",
+      "title": "Create an Exam Countdown feature where users can add exam dates and view the number of days remaining until each exam on the dashboard",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-ai-study-assistant-chatbot-that-explains-topics-in-easy-beginner-friendly-language-responds-like-a-friendly-teacher-and-provides-short-clear-explanations-to-help-students-understand-concepts",
+      "title": "Build an AI Study Assistant chatbot that explains topics in easy, beginner-friendly language, responds like a friendly teacher, and provides short, clear explanations to help students understand concepts",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-progress-tracker-that-displays-daily-study-streak-tracks-total-hours-studied-per-day-and-shows-progress-through-a-simple-visual-progress-bar",
+      "title": "Implement a Progress Tracker that displays daily study streak, tracks total hours studied per day, and shows progress through a simple visual progress bar",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-minimal-beginner-friendly-ui-with-a-light-theme-using-soft-calming-colors-avoiding-overwhelming-blues-and-purples-large-easy-to-tap-buttons-clear-readable-text-and-a-mobile-responsive-layout-suitable-for-students",
+      "title": "Design a minimal, beginner-friendly UI with a light theme using soft, calming colors (avoiding overwhelming blues and purples), large easy-to-tap buttons, clear readable text, and a mobile-responsive layout suitable for students",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Daily Study Planner with subjects and timetable view",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Pomodoro Focus Timer (25min focus + 5min break) with motivational messages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Notes Section organized by subject with edit/delete",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Flashcards Mode with question/answer and swipe review",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Exam Countdown showing days left on dashboard",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "AI Study Assistant chatbot for topic explanations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Clean minimal UI with light theme and soft colors",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Progress Tracker with daily streak and study hours",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Smart Study Buddy",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

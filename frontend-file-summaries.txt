@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes (dashboard, planner, timer, notes, flashcards, AI assistant) wrapped in a Layout component.",
+  "frontend/src/components/Layout.tsx": "Main layout component with responsive header navigation, mobile menu sheet, and footer with caffeine.ai attribution and dynamic year.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page displaying study statistics (streak, today's hours, progress), upcoming exams, and quick action cards for main features with all required lucide-react icons imported.",
+  "frontend/src/pages/StudyPlanner.tsx": "Study planner page with daily timetable for subjects and exam countdown, allowing users to add/remove subjects with study times and add exams with dates.",
+  "frontend/src/pages/PomodoroTimer.tsx": "Pomodoro timer page with 25-minute focus and 5-minute break sessions, featuring start/pause/reset controls, progress bar, and session tracking.",
+  "frontend/src/pages/NotesSection.tsx": "Notes management page with search functionality, grouped display by subject, and dialog for creating new notes with subject and content fields.",
+  "frontend/src/pages/FlashcardsMode.tsx": "Flashcards page with list view of all cards and review mode toggle, allowing users to create new flashcards with questions and answers.",
+  "frontend/src/pages/AIAssistant.tsx": "AI study assistant chat interface with message history, typing indicators, and predefined responses for common study topics like photosynthesis, quadratic equations, and study tips.",
+  "frontend/src/components/ExamCard.tsx": "Reusable exam card component displaying exam name, date, and countdown with color-coded badges for urgency (today, urgent, upcoming, past).",
+  "frontend/src/components/NoteCard.tsx": "Reusable note card component displaying note content preview with subject badge in a clean card layout.",
+  "frontend/src/components/FlashcardList.tsx": "Grid display component for flashcard list showing question previews with answer hints in a card layout.",
+  "frontend/src/components/FlashcardReview.tsx": "Full-screen flashcard review mode with flip animation, navigation controls, and progress tracking through the deck.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including subjects, notes, flashcards, and exams with localStorage fallback for data retrieval and proper BigInt handling.",
+  "frontend/src/hooks/useTimer.ts": "Custom hook managing Pomodoro timer state with 25-minute focus and 5-minute break cycles, session counting, and integration with study progress tracking.",
+  "frontend/src/hooks/useStudyProgress.ts": "Custom hook tracking daily study progress including streak calculation, total study hours, and goal percentage with localStorage persistence.",
+  "frontend/src/hooks/useAIChat.ts": "Custom hook managing AI chat state with predefined educational responses for common study topics and pattern matching for user questions.",
+  "frontend/src/index.css": "Global styles with soft, calming OKLCH color palette featuring teal primary and warm peach secondary colors optimized for extended study sessions.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color system, custom border radius values, Inter font family, readable font sizes, and soft shadow utilities for a beginner-friendly design."
+}

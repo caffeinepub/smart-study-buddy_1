@@ -1,0 +1,119 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T08:01:02.276Z",
+  "summary": "The implementation covers most core features including Study Planner, Pomodoro Timer, Notes Section, Flashcards Mode, Exam Countdown, AI Assistant, Progress Tracker, and UI design. However, several acceptance criteria are missing or incomplete, particularly around edit/delete functionality and subject filtering/organization.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Users can edit existing subjects and their study times",
+      "reason": "Backend only provides addSubject and removeSubject methods. No updateSubject method exists, and frontend does not implement edit functionality for subjects.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/pages/StudyPlanner.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Users can edit existing note content",
+      "reason": "Backend addNote method exists but no updateNote method is implemented. Frontend does not show edit functionality in NoteCard or NotesSection components.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/NoteCard.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Users can delete notes with confirmation",
+      "reason": "No deleteNote method exists in backend, and no delete functionality is visible in frontend note components.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/pages/NotesSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Flashcards can be organized by subject or topic",
+      "reason": "Flashcard type only has id, question, and answer fields. No subject/topic field exists, and no organization by subject is implemented.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/pages/FlashcardsMode.tsx"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Users can swipe left or right to navigate between flashcards",
+      "reason": "FlashcardReview uses button navigation (Next/Previous) but does not implement swipe gestures for touch interaction.",
+      "evidence": [
+        "frontend/src/components/FlashcardReview.tsx"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Flashcards can be edited or deleted",
+      "reason": "Backend has updateFlashcard but no deleteFlashcard method. Frontend FlashcardList and FlashcardReview do not show edit or delete controls.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/FlashcardList.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Users can edit or delete exam entries",
+      "reason": "Backend only provides addExam and getDaysUntilExam. No updateExam or deleteExam methods exist, and frontend ExamCard shows no edit/delete controls.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/ExamCard.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Past exams are either archived or clearly marked as completed",
+      "reason": "While ExamCard shows 'Completed' badge for past exams, there is no archival functionality or separate view for completed exams.",
+      "evidence": [
+        "frontend/src/components/ExamCard.tsx",
+        "frontend/src/pages/Dashboard.tsx"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Study time is logged from Pomodoro sessions or manual entries",
+      "reason": "Study time is logged from Pomodoro sessions, but no manual entry mechanism is visible in the implementation.",
+      "evidence": [
+        "frontend/src/hooks/useTimer.ts",
+        "frontend/src/hooks/useStudyProgress.ts"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.92,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/ExamCard.tsx",
+    "frontend/src/components/FlashcardList.tsx",
+    "frontend/src/components/FlashcardReview.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/NoteCard.tsx",
+    "frontend/src/hooks/useAIChat.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useStudyProgress.ts",
+    "frontend/src/hooks/useTimer.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AIAssistant.tsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/FlashcardsMode.tsx",
+    "frontend/src/pages/NotesSection.tsx",
+    "frontend/src/pages/PomodoroTimer.tsx",
+    "frontend/src/pages/StudyPlanner.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

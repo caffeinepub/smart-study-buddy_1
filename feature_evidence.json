@@ -1,0 +1,157 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-daily-study-planner-where-users-can-add-subjects-science-maths-english-etc-set-study-time-for-each-subject-and-view-a-simple-timetable-displaying-all-planned-study-sessions",
+      "featureTitle": "Implement a Daily Study Planner where users can add subjects (Science, Maths, English, etc.), set study time for each subject, and view a simple timetable displaying all planned study sessions",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-pomodoro-focus-timer-with-25-minute-focus-sessions-and-5-minute-breaks-including-start-pause-and-reset-controls-and-display-motivational-messages-after-each-completed-session",
+      "featureTitle": "Create a Pomodoro Focus Timer with 25-minute focus sessions and 5-minute breaks, including start, pause, and reset controls, and display motivational messages after each completed session",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/hooks/useTimer.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-notes-section-where-users-can-write-and-save-short-notes-organize-notes-by-subject-and-edit-or-delete-existing-notes-easily",
+      "featureTitle": "Build a Notes Section where users can write and save short notes, organize notes by subject, and edit or delete existing notes easily",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/NoteCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-flashcards-mode-for-quick-revision-where-users-can-create-flashcards-with-questions-on-the-front-and-answers-on-the-back-and-swipe-through-cards-for-review",
+      "featureTitle": "Implement a Flashcards Mode for quick revision where users can create flashcards with questions on the front and answers on the back, and swipe through cards for review",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FlashcardList.tsx",
+        "frontend/src/components/FlashcardReview.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-exam-countdown-feature-where-users-can-add-exam-dates-and-view-the-number-of-days-remaining-until-each-exam-on-the-dashboard",
+      "featureTitle": "Create an Exam Countdown feature where users can add exam dates and view the number of days remaining until each exam on the dashboard",
+      "files": [
+        "frontend/src/components/ExamCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-ai-study-assistant-chatbot-that-explains-topics-in-easy-beginner-friendly-language-responds-like-a-friendly-teacher-and-provides-short-clear-explanations-to-help-students-understand-concepts",
+      "featureTitle": "Build an AI Study Assistant chatbot that explains topics in easy, beginner-friendly language, responds like a friendly teacher, and provides short, clear explanations to help students understand concepts",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/hooks/useAIChat.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-progress-tracker-that-displays-daily-study-streak-tracks-total-hours-studied-per-day-and-shows-progress-through-a-simple-visual-progress-bar",
+      "featureTitle": "Implement a Progress Tracker that displays daily study streak, tracks total hours studied per day, and shows progress through a simple visual progress bar",
+      "files": [
+        "frontend/src/hooks/useStudyProgress.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-minimal-beginner-friendly-ui-with-a-light-theme-using-soft-calming-colors-avoiding-overwhelming-blues-and-purples-large-easy-to-tap-buttons-clear-readable-text-and-a-mobile-responsive-layout-suitable-for-students",
+      "featureTitle": "Design a minimal, beginner-friendly UI with a light theme using soft, calming colors (avoiding overwhelming blues and purples), large easy-to-tap buttons, clear readable text, and a mobile-responsive layout suitable for students",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

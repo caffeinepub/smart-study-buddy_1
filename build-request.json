@@ -1,0 +1,212 @@
+{
+  "kind": "build_request",
+  "title": "Build Smart Study Buddy - Student Study App with Planner, Timer, Notes, Flashcards, and AI Assistant",
+  "projectName": "Smart Study Buddy",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a Daily Study Planner where users can add subjects (Science, Maths, English, etc.), set study time for each subject, and view a simple timetable displaying all planned study sessions",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Users can add subjects (Science, Maths, English, etc.)",
+          "Set study time for each subject",
+          "Simple timetable view"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can create new subjects with custom names",
+        "Users can assign a study time duration to each subject",
+        "A timetable view displays all subjects with their allocated study times",
+        "Users can edit or delete existing subjects and their study times"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a Pomodoro Focus Timer with 25-minute focus sessions and 5-minute breaks, including start, pause, and reset controls, and display motivational messages after each completed session",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "25-minute focus + 5-minute break timer",
+          "Start, pause, and reset button",
+          "Motivational messages after each session"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Timer alternates between 25-minute focus and 5-minute break periods",
+        "Start button initiates the timer countdown",
+        "Pause button stops the timer and allows resuming from the same point",
+        "Reset button returns the timer to its initial state",
+        "A motivational message is displayed when a focus session completes",
+        "Timer persists state during the session"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build a Notes Section where users can write and save short notes, organize notes by subject, and edit or delete existing notes easily",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Users can write and save short notes",
+          "Organize notes by subject",
+          "Easy edit and delete option"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can create new notes with title and content",
+        "Each note can be tagged with a subject for organization",
+        "Notes are grouped or filterable by subject",
+        "Users can edit existing note content",
+        "Users can delete notes with confirmation",
+        "All notes persist across sessions"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a Flashcards Mode for quick revision where users can create flashcards with questions on the front and answers on the back, and swipe through cards for review",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create flashcards for quick revision",
+          "Question on front, answer on back",
+          "Swipe to review cards"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can create new flashcards with a question and answer",
+        "Flashcards can be organized by subject or topic",
+        "In review mode, the question is displayed first",
+        "Users can flip or tap to reveal the answer",
+        "Users can swipe left or right to navigate between flashcards",
+        "Flashcards persist and can be edited or deleted"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create an Exam Countdown feature where users can add exam dates and view the number of days remaining until each exam on the dashboard",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add exam date",
+          "Show days left for exams on dashboard"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can add exams with name, subject, and date",
+        "Dashboard displays all upcoming exams with countdown in days",
+        "Countdown updates automatically based on current date",
+        "Users can edit or delete exam entries",
+        "Past exams are either archived or clearly marked as completed"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build an AI Study Assistant chatbot that explains topics in easy, beginner-friendly language, responds like a friendly teacher, and provides short, clear explanations to help students understand concepts",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Simple chatbot to explain topics in easy language",
+          "Should respond like a friendly teacher",
+          "Give short and easy explanations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat interface allows users to ask questions about study topics",
+        "AI assistant responds with explanations appropriate for Class 8-12 students",
+        "Responses are concise and use simple, accessible language",
+        "Chat history is visible during the session",
+        "Assistant maintains a friendly, encouraging tone"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a Progress Tracker that displays daily study streak, tracks total hours studied per day, and shows progress through a simple visual progress bar",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Show daily study streak",
+          "Track hours studied per day",
+          "Simple progress bar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System tracks consecutive days of study activity as a streak",
+        "Dashboard displays current streak count prominently",
+        "Total study hours for the current day are calculated and displayed",
+        "A progress bar or similar visual element shows study progress",
+        "Progress data persists across sessions",
+        "Study time is logged from Pomodoro sessions or manual entries"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Design a minimal, beginner-friendly UI with a light theme using soft, calming colors (avoiding overwhelming blues and purples), large easy-to-tap buttons, clear readable text, and a mobile-responsive layout suitable for students",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Minimal UI (very easy for beginners)",
+          "Light theme with soft colors",
+          "Large buttons and clear text",
+          "Keep the app very lightweight, mobile-friendly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI uses a light theme with soft, gentle color palette appropriate for extended study sessions",
+        "All interactive elements (buttons, inputs) are large enough for easy touch interaction",
+        "Typography is clear and highly readable with appropriate font sizes",
+        "Layout is clean and uncluttered with ample whitespace",
+        "Navigation is intuitive with minimal learning curve",
+        "App is fully responsive and works well on mobile devices",
+        "Design maintains consistency across all features"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must work within single-actor Motoko backend architecture",
+    "No external database or cloud service integrations",
+    "No real-time WebSocket features",
+    "AI Study Assistant must use only frontend-based solutions or simple prompt-response patterns"
+  ],
+  "nonGoals": [
+    "Multi-user collaboration features",
+    "Social features or student networking",
+    "Video or audio content",
+    "Complex analytics or data visualization beyond basic progress tracking",
+    "Gamification with points, levels, or rewards systems",
+    "Offline mode or PWA functionality",
+    "Integration with external educational platforms or APIs"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Friendly study buddy mascot illustration for app icon and dashboard (study-buddy-mascot.dim_256x256.png)",
+      "Calm study environment hero banner with desk and books for landing area (study-hero.dim_1200x400.png)",
+      "Simple subject icons set including Science, Maths, English, History, Geography (subject-icons.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Smart Study Buddy - Frontend Implementation Plan",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement Daily Study Planner with subject management and timetable view",
+      "acceptanceCriteria": [
+        "Users can create new subjects with custom names",
+        "Users can assign a study time duration to each subject",
+        "A timetable view displays all subjects with their allocated study times",
+        "Users can edit or delete existing subjects and their study times"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StudyPlanner.tsx",
+          "operation": "create",
+          "description": "Create component for daily study planner with form to add subjects and study times. Display timetable showing all planned subjects. Wire subject-icons.dim_512x512.png from frontend/public/assets/generated/subject-icons.dim_512x512.png for subject visualization. Use backend methods addSubject, removeSubject, and getDailyTimetable via storage client."
+        },
+        {
+          "path": "frontend/src/components/SubjectForm.tsx",
+          "operation": "create",
+          "description": "Create reusable form component for adding/editing subjects with name input and study time duration selector. Include validation for required fields and proper time format."
+        },
+        {
+          "path": "frontend/src/components/TimetableView.tsx",
+          "operation": "create",
+          "description": "Create timetable display component that shows subjects with allocated study times in a clean, organized layout. Include edit and delete actions for each subject entry."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire StudyPlanner component into main app routing and navigation. Ensure planner is accessible from primary navigation menu."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create Pomodoro Focus Timer with controls and motivational messages",
+      "acceptanceCriteria": [
+        "Timer alternates between 25-minute focus and 5-minute break periods",
+        "Start button initiates the timer countdown",
+        "Pause button stops the timer and allows resuming from the same point",
+        "Reset button returns the timer to its initial state",
+        "A motivational message is displayed when a focus session completes",
+        "Timer persists state during the session"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PomodoroTimer.tsx",
+          "operation": "create",
+          "description": "Create Pomodoro timer component with 25-minute focus and 5-minute break countdown. Implement start, pause, and reset controls. Display motivational messages on session completion. Use localStorage for session state persistence."
+        },
+        {
+          "path": "frontend/src/hooks/useTimer.ts",
+          "operation": "create",
+          "description": "Create custom hook managing timer state, countdown logic, and automatic alternation between focus and break periods. Handle pause/resume and reset functionality."
+        },
+        {
+          "path": "frontend/src/components/MotivationalMessage.tsx",
+          "operation": "create",
+          "description": "Create component displaying randomized motivational messages after completed focus sessions. Use friendly, encouraging language appropriate for students."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire PomodoroTimer component into main app. Make timer easily accessible from dashboard or dedicated timer page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Notes Section with subject organization and editing capabilities",
+      "acceptanceCriteria": [
+        "Users can create new notes with title and content",
+        "Each note can be tagged with a subject for organization",
+        "Notes are grouped or filterable by subject",
+        "Users can edit existing note content",
+        "Users can delete notes with confirmation",
+        "All notes persist across sessions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/NotesSection.tsx",
+          "operation": "create",
+          "description": "Create notes management component with list view showing all notes organized by subject. Include filtering by subject and actions for creating, editing, and deleting notes. Use backend method addNote via storage client."
+        },
+        {
+          "path": "frontend/src/components/NoteEditor.tsx",
+          "operation": "create",
+          "description": "Create note editor component with title input, content textarea, and subject selector. Support both creation and editing modes with save and cancel actions."
+        },
+        {
+          "path": "frontend/src/components/NoteCard.tsx",
+          "operation": "create",
+          "description": "Create individual note card component displaying note preview with subject tag. Include edit and delete buttons with confirmation dialog for destructive actions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire NotesSection component into main app routing. Add notes link to primary navigation menu."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement Flashcards Mode with flip and swipe navigation",
+      "acceptanceCriteria": [
+        "Users can create new flashcards with a question and answer",
+        "Flashcards can be organized by subject or topic",
+        "In review mode, the question is displayed first",
+        "Users can flip or tap to reveal the answer",
+        "Users can swipe left or right to navigate between flashcards",
+        "Flashcards persist and can be edited or deleted"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FlashcardsMode.tsx",
+          "operation": "create",
+          "description": "Create flashcards mode component with list view for managing flashcards and review mode for studying. Use backend methods createFlashcard, getAllFlashcards, getFlashcard, and updateFlashcard via storage client."
+        },
+        {
+          "path": "frontend/src/components/FlashcardReview.tsx",
+          "operation": "create",
+          "description": "Create flashcard review component with flip animation to reveal answer and swipe gestures for navigation. Display question first, allow tap/click to flip, and swipe left/right to move between cards."
+        },
+        {
+          "path": "frontend/src/components/FlashcardEditor.tsx",
+          "operation": "create",
+          "description": "Create flashcard editor component with question and answer inputs, subject/topic selector, and save/cancel actions. Support both creation and editing modes."
+        },
+        {
+          "path": "frontend/src/components/FlashcardList.tsx",
+          "operation": "create",
+          "description": "Create flashcard list component displaying all flashcards with subject organization. Include edit, delete, and start review actions for each card or deck."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire FlashcardsMode component into main app routing. Add flashcards link to primary navigation menu."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create Exam Countdown feature with days remaining display",
+      "acceptanceCriteria": [
+        "Users can add exams with name, subject, and date",
+        "Dashboard displays all upcoming exams with countdown in days",
+        "Countdown updates automatically based on current date",
+        "Users can edit or delete exam entries",
+        "Past exams are either archived or clearly marked as completed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ExamCountdown.tsx",
+          "operation": "create",
+          "description": "Create exam countdown component displaying upcoming exams with days remaining. Use backend methods addExam and getDaysUntilExam via storage client. Calculate countdown based on current date and mark past exams as completed."
+        },
+        {
+          "path": "frontend/src/components/ExamForm.tsx",
+          "operation": "create",
+          "description": "Create form component for adding exams with name, subject, and date picker. Include validation for required fields and future dates."
+        },
+        {
+          "path": "frontend/src/components/ExamCard.tsx",
+          "operation": "create",
+          "description": "Create exam card component displaying exam details with countdown badge showing days remaining. Include edit and delete actions with different styling for past exams."
+        },
+        {
+          "path": "frontend/src/components/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Integrate ExamCountdown component into dashboard to prominently display upcoming exams with countdown. Wire study-buddy-mascot.dim_256x256.png from frontend/public/assets/generated/study-buddy-mascot.dim_256x256.png as dashboard branding element."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build AI Study Assistant chatbot with beginner-friendly explanations",
+      "acceptanceCriteria": [
+        "Chat interface allows users to ask questions about study topics",
+        "AI assistant responds with explanations appropriate for Class 8-12 students",
+        "Responses are concise and use simple, accessible language",
+        "Chat history is visible during the session",
+        "Assistant maintains a friendly, encouraging tone"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AIAssistant.tsx",
+          "operation": "create",
+          "description": "Create AI study assistant chat interface with message history display and input field. Implement frontend-based response generation using simple prompt-response patterns with educational explanations appropriate for Class 8-12 students. Maintain friendly, encouraging tone in all responses."
+        },
+        {
+          "path": "frontend/src/hooks/useAIChat.ts",
+          "operation": "create",
+          "description": "Create custom hook managing chat state, message history, and response generation logic. Implement simple pattern matching or rule-based responses for common study topics with beginner-friendly explanations."
+        },
+        {
+          "path": "frontend/src/components/ChatMessage.tsx",
+          "operation": "create",
+          "description": "Create chat message component displaying individual messages with different styling for user questions and assistant responses. Include timestamp and appropriate avatars."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AIAssistant component into main app routing. Add AI assistant link to primary navigation menu."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement Progress Tracker with streak and study hours display",
+      "acceptanceCriteria": [
+        "System tracks consecutive days of study activity as a streak",
+        "Dashboard displays current streak count prominently",
+        "Total study hours for the current day are calculated and displayed",
+        "A progress bar or similar visual element shows study progress",
+        "Progress data persists across sessions",
+        "Study time is logged from Pomodoro sessions or manual entries"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProgressTracker.tsx",
+          "operation": "create",
+          "description": "Create progress tracker component displaying daily study streak, total hours studied today, and visual progress bar. Track study time from Pomodoro sessions and persist data in localStorage."
+        },
+        {
+          "path": "frontend/src/hooks/useStudyProgress.ts",
+          "operation": "create",
+          "description": "Create custom hook managing study progress state including streak calculation, daily hours tracking, and integration with Pomodoro timer completions. Handle localStorage persistence for progress data."
+        },
+        {
+          "path": "frontend/src/components/ProgressBar.tsx",
+          "operation": "create",
+          "description": "Create reusable progress bar component with visual representation of study progress. Support different styles and animated transitions for progress updates."
+        },
+        {
+          "path": "frontend/src/components/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Integrate ProgressTracker component into dashboard prominently displaying streak and daily study hours with progress visualization."
+        },
+        {
+          "path": "frontend/src/components/PomodoroTimer.tsx",
+          "operation": "modify",
+          "description": "Add integration with progress tracker to log completed study sessions. Update total study time when Pomodoro focus sessions complete successfully."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Design minimal, beginner-friendly UI with light theme and mobile-responsive layout",
+      "acceptanceCriteria": [
+        "UI uses a light theme with soft, gentle color palette appropriate for extended study sessions",
+        "All interactive elements (buttons, inputs) are large enough for easy touch interaction",
+        "Typography is clear and highly readable with appropriate font sizes",
+        "Layout is clean and uncluttered with ample whitespace",
+        "Navigation is intuitive with minimal learning curve",
+        "App is fully responsive and works well on mobile devices",
+        "Design maintains consistency across all features"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles with soft, calming light color palette avoiding overwhelming blues and purples. Set clear, readable typography with appropriate font sizes. Define spacing utilities for clean layouts with ample whitespace. Ensure mobile-first responsive design approach."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind theme with custom color palette using soft, gentle colors appropriate for extended study sessions. Define large button sizes, readable text scales, and spacing utilities for clean, minimal layouts. Configure responsive breakpoints for mobile-friendly design."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create main layout component with consistent header navigation, main content area, and minimal footer. Implement mobile-responsive navigation with large touch targets. Wire study-hero.dim_1200x400.png from frontend/public/assets/generated/study-hero.dim_1200x400.png as hero banner for landing area. Ensure clean, uncluttered design with intuitive navigation structure."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create navigation component with large, easy-to-tap buttons for all main features (Planner, Timer, Notes, Flashcards, Exams, AI Assistant, Progress). Implement mobile-responsive menu with hamburger toggle on small screens. Use clear labels and optional icons for better accessibility."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap main app content with Layout component to ensure consistent design across all pages. Configure routing for all feature pages with clean URL structure."
+        }
+      ]
+    }
+  ]
+}
